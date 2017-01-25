@@ -29,11 +29,13 @@
     $('#determine2').on("click", function (event) {
         $('#output2').html(words());
     });
+        
+    
 
-    function rollem(s: number, d: number){
+    function rollem(){
 
-        console.log(s);
-        console.log(d);
+        let s = parseInt((<HTMLInputElement>document.getElementById('numSides')).value);
+        let d = parseInt((<HTMLInputElement>document.getElementById('numDice')).value);
 
         let roll = 0;
 
@@ -50,9 +52,7 @@
     }
 
     $('#rollem').on("click", function (event){
-        let sides = parseInt((<HTMLInputElement>document.getElementById('numSides')).value);
-        let dice = parseInt((<HTMLInputElement>document.getElementById('numDice')).value);
-        $('#result').html(rollem(sides, dice));
+        $('#result').html(rollem());
     });
     
 
