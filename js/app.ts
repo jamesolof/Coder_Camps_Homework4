@@ -27,7 +27,7 @@
     };
 
     $('#determine2').on("click", function (event) {
-        $('#largestNumber').html(words());
+        $('#output2').html(words());
     });
 
     function rollem(s: number, d: number){
