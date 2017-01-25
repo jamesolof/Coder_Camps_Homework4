@@ -22,9 +22,9 @@ function words() {
 $('#determine2').on("click", function (event) {
     $('#output2').html(words());
 });
-function rollem(s, d) {
-    console.log(s);
-    console.log(d);
+function rollem() {
+    var s = parseInt(document.getElementById('numSides').value);
+    var d = parseInt(document.getElementById('numDice').value);
     var roll = 0;
     var i = 1;
     while (i <= d) {
@@ -35,8 +35,6 @@ function rollem(s, d) {
     return String(roll);
 }
 $('#rollem').on("click", function (event) {
-    var sides = parseInt(document.getElementById('numSides').value);
-    var dice = parseInt(document.getElementById('numDice').value);
-    $('#result').html(rollem(sides, dice));
+    $('#result').html(rollem());
 });
 //# sourceMappingURL=app.js.map
